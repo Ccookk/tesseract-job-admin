@@ -156,6 +156,7 @@ public class TaskExecutorDelegate {
      */
     private static void doRequest(CurrentTaskInfo currentTaskInfo) {
         TesseractExecutorRequest executorRequest = currentTaskInfo.getExecutorRequest();
+        executorRequest.setParams(currentTaskInfo.getTaskContextInfo().getTrigger().getParams());
         TesseractExecutorDetail currentExecutorDetail = currentTaskInfo.getCurrentExecutorDetail();
         TesseractLog tesseractLog = currentTaskInfo.getLog();
         TesseractExecutorResponse response;

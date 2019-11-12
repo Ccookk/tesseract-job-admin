@@ -5,4 +5,6 @@ import lombok.Data;
 @Data
 public class ExecutorContext {
     private Integer shardingIndex;
+
+    private String params;
 }

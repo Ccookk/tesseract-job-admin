@@ -19,11 +19,12 @@
 
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
+        <result column="params" property="params"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, next_trigger_time, prev_trigger_time, cron, strategy, sharding_num, retry_count, status, creator, create_time, description, update_time
+        id, name, next_trigger_time, prev_trigger_time, cron, strategy, sharding_num, retry_count, status, creator, create_time, description, update_time, params
     </sql>
 
 </mapper>

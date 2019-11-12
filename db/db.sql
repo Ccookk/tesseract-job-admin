@@ -31,6 +31,7 @@ create table tesseract_trigger
     update_time       bigint       not null COMMENT '更新时间',
     group_name        varchar(30)  not null COMMENT '组名称',
     group_id          int unsigned not null COMMENT '关联组',
+    params            varchar(255) COMMENT '参数',
     index (status),
     unique (name)
 ) engine = InnoDB

@@ -222,6 +222,7 @@ public class TesseractExecutor {
                 JobHandler jobHandler = (JobHandler) aClass.newInstance();
                 ExecutorContext executorContext = new ExecutorContext();
                 executorContext.setShardingIndex(tesseractExecutorRequest.getShardingIndex());
+                executorContext.setParams(tesseractExecutorRequest.getParams());
                 jobHandler.execute(executorContext);
                 clientFeignService.notify(new URI(adminServerAddress + NOTIFY_MAPPING), tesseractAdminJobNotify);
             } catch (Exception e) {

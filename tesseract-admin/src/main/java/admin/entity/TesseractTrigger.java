@@ -68,5 +68,5 @@ public class TesseractTrigger implements Serializable {
 
     private Long updateTime;
 
-
+    private String params;
 }
